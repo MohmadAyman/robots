@@ -3,6 +3,7 @@
 	<model name="msj_platform">
 		<link name="base">
 			<self_collide>false</self_collide>
+			<kinematic>true</kinematic>
 			<pose frame="">0.0 0.0 0.0 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
@@ -142,10 +143,10 @@
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
-		<joint name="sphere_axis2" type="revolute">
-			<parent>sphere_link2</parent>
-			<child>top</child>
-			<pose frame="">8.881784197001253e-18 -1.1102230246251566e-18 -0.053571428571428575 0 0 0</pose>
+		<joint name="sphere_axis1" type="revolute">
+			<parent>sphere_link1</parent>
+			<child>sphere_link2</child>
+			<pose frame="">-1.3322676295501878e-17 6.248343620285368e-11 9.080926233195896e-11 0 0 0</pose>
 			<axis>
 				<xyz>0 1 0</xyz>
 				<limit>
@@ -155,10 +156,10 @@
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
-		<joint name="sphere_axis1" type="revolute">
-			<parent>sphere_link1</parent>
-			<child>sphere_link2</child>
-			<pose frame="">-1.3322676295501878e-17 6.248343620285368e-11 9.080926233195896e-11 0 0 0</pose>
+		<joint name="sphere_axis2" type="revolute">
+			<parent>sphere_link2</parent>
+			<child>top</child>
+			<pose frame="">8.881784197001253e-18 -1.1102230246251566e-18 -0.053571428571428575 0 0 0</pose>
 			<axis>
 				<xyz>0 0 1</xyz>
 				<limit>
@@ -168,6 +169,7 @@
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
+
 		<plugin filename="libcardsflow_gazebo_plugin.so" name="cardsflow_gazebo_plugin">
 			<!--<myoMuscle name="motor2">-->
 				<!--<link name="base">-->
